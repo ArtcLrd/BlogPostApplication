@@ -37,11 +37,11 @@ export default function BlogPostPage() {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/api/public/blogs/${id}`);
+        const res = await fetch(`/public/blogs/${id}`);
         if (!res.ok) return setError(true);
         const data = await res.json();
         setBlog(data);
-      } catch {
+      } catch (err) {
         setError(true);
       }
     };
@@ -52,7 +52,7 @@ export default function BlogPostPage() {
     const confirmed = confirm('Are you sure you want to delete this blog?');
     if (!confirmed) return;
 
-    const res = await fetch(`http://localhost:5000/api/blogs/${id}`, {
+    const res = await fetch(`/blogs/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

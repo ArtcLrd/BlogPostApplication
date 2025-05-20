@@ -22,7 +22,7 @@ export function BlogList() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/public/blogs');
+        const res = await fetch('/public/blogs');
         const data = await res.json();
         setBlogs(data);
       } catch (error) {
