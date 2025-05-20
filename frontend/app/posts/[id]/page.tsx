@@ -37,7 +37,7 @@ export default function BlogPostPage() {
   useEffect(() => {
     const fetchBlog = async () => {
       try {
-        const res = await fetch(`/public/blogs/${id}`);
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/public/blogs/${id}`);
         if (!res.ok) return setError(true);
         const data = await res.json();
         setBlog(data);

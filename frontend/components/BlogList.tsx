@@ -22,7 +22,7 @@ export function BlogList() {
   useEffect(() => {
     const fetchBlogs = async () => {
       try {
-        const res = await fetch('/public/blogs');
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/public/blogs`);
         const data = await res.json();
         setBlogs(data);
       } catch (error) {

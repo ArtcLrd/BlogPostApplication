@@ -24,7 +24,7 @@ const EditBlogPage = () => {
       }
 
       const token = localStorage.getItem('token');
-      const res = await fetch(`/blogs/${id}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/blogs/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -55,7 +55,7 @@ const EditBlogPage = () => {
 
   const handleUpdate = async (status: 'draft' | 'published') => {
     const token = localStorage.getItem('token');
-    const res = await fetch(`/blogs/${id}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/blogs/${id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
