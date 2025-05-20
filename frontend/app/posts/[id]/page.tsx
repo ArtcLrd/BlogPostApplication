@@ -52,7 +52,7 @@ export default function BlogPostPage() {
     const confirmed = confirm('Are you sure you want to delete this blog?');
     if (!confirmed) return;
 
-    const res = await fetch(`/blogs/${id}`, {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_BASE_URL}/blogs/${id}`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
