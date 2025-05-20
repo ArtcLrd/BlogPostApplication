@@ -41,7 +41,7 @@ export default function BlogPostPage() {
         if (!res.ok) return setError(true);
         const data = await res.json();
         setBlog(data);
-      } catch (err) {
+      } catch {
         setError(true);
       }
     };
