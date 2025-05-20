@@ -108,3 +108,8 @@ Example (Base URL: `https://blogpostapplication.onrender.com/`):
 ## 📬 Contact
 
 If you have any feedback or suggestions, feel free to reach out.
+
+## Demo Email and Password:
+
+email: abc@gmail.com
+pass: 1234
