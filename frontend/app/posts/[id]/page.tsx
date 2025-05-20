@@ -25,12 +25,11 @@ export default function BlogPostPage() {
   const [error, setError] = useState(false);
   const [userId, setUserId] = useState<string | null>(null);
 
-  // Fetch user ID from Supabase JWT (stored in localStorage or cookie)
   useEffect(() => {
     const token = localStorage.getItem('token');
     if (token) {
       const payload = JSON.parse(atob(token.split('.')[1]));
-      setUserId(payload.sub); // 'sub' is the user's UUID
+      setUserId(payload.sub);
     }
   }, []);
 

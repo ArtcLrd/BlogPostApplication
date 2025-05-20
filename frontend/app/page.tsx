@@ -9,7 +9,7 @@ export default function Home() {
           Create Your Blog
         </h1>
         <p className="text-muted-foreground max-w-md mx-auto">
-          Share your thoughts with the world. Start writing below and publish when you&apos;re ready.
+          Share your thoughts with the world.
         </p>
       </div>
       <div className="rounded-lg border bg-card p-4 md:p-6 shadow-sm">
