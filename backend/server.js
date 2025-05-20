@@ -134,7 +134,7 @@ app.delete('/api/blogs/:id', tokenMiddleware, async (req, res) => {
   const userId = req.user.user_id;
   const blogId = req.params.id;
 
-  const error  = await supabase
+  const {data,error}  = await supabase
     .from('blogs')
     .delete()
     .eq('id', blogId)
